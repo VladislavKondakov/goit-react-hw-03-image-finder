@@ -11,7 +11,6 @@ export class App extends React.Component {
   handleSearch = (searchText) => {
     this.setState({searchText});
   }
-
   render() {
     return (
       <div>
