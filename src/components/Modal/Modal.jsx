@@ -20,7 +20,6 @@ const ModalContainer = styled.div`
   max-height: calc(100% - 48px);
   margin: 0;
   padding: 0;
-  overflow: auto;
   background-color: #fff;
   border-radius: 4px;
   display: flex;
@@ -31,7 +30,6 @@ const ModalContainer = styled.div`
 class Modal extends Component {
   handleClose = e => {
     if (e.key === 'Escape') this.props.onClose();
-    window.removeEventListener(this.listeningEscape);
   };
   componentDidMount() {
     window.addEventListener('keydown', this.handleClose);
